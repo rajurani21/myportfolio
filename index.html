@@ -11,15 +11,19 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-    <a href="#" class="logo">My Portfolio</a>
-    <ul>
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <a href="#" class="logo">Portfolio</a>
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="bx bx-menu"></i>
+  </div>
+  <ul id="nav-links">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
 
   <!-- Home Section -->
   <section class="home" id="home">
@@ -93,4 +97,13 @@
   </section>
 
 </body>
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.onclick = () => {
+    navLinks.classList.toggle('active');
+  };
+</script>
+
 </html>
