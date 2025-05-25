@@ -190,3 +190,107 @@ a {
   display: inline-block;
   margin: 8px;
 }
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 5%;
+  }
+
+  .home-info {
+    max-width: 100%;
+  }
+
+  .home-img {
+    margin-top: 30px;
+  }
+
+  .home-img .img-box {
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 15px 5%;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .navbar ul li {
+    margin: 10px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .logo {
+    font-size: 24px;
+  }
+
+  .navbar ul li a {
+    font-size: 16px;
+  }
+
+  .home-info h1 {
+    font-size: 32px;
+  }
+
+  .home-info h2 {
+    font-size: 24px;
+  }
+
+  .home-info p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .btn-sci .sci a {
+    font-size: 18px;
+    padding: 6px;
+  }
+
+  .section {
+    padding: 60px 5%;
+  }
+
+  .section h2 {
+    font-size: 28px;
+  }
+
+  .section p,
+  .section li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 4%;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .home-img .img-box {
+    width: 70vw;
+    height: 70vw;
+  }
+
+  .skills-list li {
+    display: block;
+    width: 100%;
+  }
+}
+
