@@ -132,8 +132,9 @@ a {
 
 .home-img .img-box {
   position: relative;
-  width: 32vw;
-  height: 32vw;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
   background: slateblue;
   border-radius: 50%;
   padding: 5px;
@@ -141,7 +142,10 @@ a {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  margin: auto; /* center on smaller devices */
 }
+
+
 
 .home-img .img-item {
   width: 100%;
@@ -190,6 +194,7 @@ a {
   display: inline-block;
   margin: 8px;
 }
+
 .menu-toggle {
   display: none;
   font-size: 28px;
@@ -249,4 +254,6 @@ a {
     gap: 15px;
   }
 }
-
+html {
+  scroll-behavior: smooth;
+}
