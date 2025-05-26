@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gowtham Raju Ganta |My Portfolio</title>
+  <title>Gowtham Raju Ganta | My Portfolio</title>
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.CSS" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar">
-  <a href="#" class="logo">My Portfolio</a>
-  <div class="menu-toggle" id="menu-toggle">
-    <i class="bx bx-menu"></i>
-  </div>
-  <ul id="nav-links">
-    <li class="active"><a href="#">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
+    <a href="#" class="logo">MyPortfolio</a>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="bx bx-menu"></i>
+    </div>
+    <ul id="nav-links">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
   <!-- Home Section -->
   <section class="home" id="home">
@@ -67,7 +67,6 @@
       <li>OpenCV</li>
       <li>face_recognition</li>
       <li>Web Development</li>
-
       <li>CMake</li>
     </ul>
   </section>
@@ -76,34 +75,109 @@
   <section id="projects" class="section">
     <h2>Projects</h2>
     <ul class="projects-list">
-      <li>
-        <strong>Face Recognition Attendance System:</strong> Built with Python, Flask, OpenCV. Allows admin login and image upload, and logs attendance to CSV.
-      </li>
-      <li>
-        <strong>Real-Time Chat App:</strong> Developed using WebSocket/Socket.IO with backend and frontend integration during internship.
-      </li>
-      <li>
-        <strong>Certificate Generator Web App:</strong> Generates printable certificates using uploaded templates and form data.
-      </li>
+      <li><strong>Face Recognition Attendance System:</strong> Built with Python, Flask, OpenCV. Allows admin login and image upload, and logs attendance to CSV.</li>
+      <li><strong>Real-Time Chat App:</strong> Developed using WebSocket/Socket.IO with backend and frontend integration during internship.</li>
+      <li><strong>Certificate Generator Web App:</strong> Generates printable certificates using uploaded templates and form data.</li>
     </ul>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="section">
+    <h2>Certifications</h2>
+    <div class="certifications-grid">
+      <div class="certificate-item">
+        <strong>Python Essentials 1</strong><br>
+        <img src="PE1.jpg" class="certificate-image" alt="Python Certificate">
+      </div>
+
+      <div class="certificate-item">
+        <strong>Python Essentials 2</strong><br>
+        <img src="PE2.jpg" class="certificate-image" alt="Web Dev Certificate">
+      </div>
+
+      <div class="certificate-item">
+        <strong>Cyber Security Fundamentals</strong><br>
+        <img src="/cybersecurity.jpg" class="certificate-image" alt="Cyber Security Certificate">
+      </div>
+
+      <div class="certificate-item">
+        <strong>Introduction to Python</strong><br>
+        <img src="infosys.jpg" class="certificate-image" alt="Web Dev Certificate">
+      </div>
+
+      <div class="certificate-item">
+        <strong>Communication Skills</strong><br>
+        <img src="tcs.jpg" class="certificate-image" alt="Web Dev Certificate">
+      </div>
+
+      <div class="certificate-item">
+        <strong>Introduction To Python Programmin  </strong><br>
+        <img src="redhat.jpg" class="certificate-image" alt="Web Dev Certificate">
+      </div>
+
+      <div class="certificate-item">
+        <strong>Web Development Intern</strong><br>
+        <img src="skill craft complet.jpg" class="certificate-image" alt="Web Dev Certificate">
+      </div>
+
+      <div class="certificate-item">
+        <strong>Skill Craft Recommendation Letter</strong><br>
+        <img src="sc recom.jpg" class="certificate-image" alt="Web Dev Certificate">
+      </div>
+    </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="section">
     <h2>Contact</h2>
-    <p><strong>Email:</strong> <a href="mailto:gantagowthamraju2126@gmail.com">gantagowthamraju2126@gmail.com</a></p>
+    <p><strong>Email:</strong> <a href="mailto:ganatgowthamraju2126@gmail.com">ganatgowthamraju2126@gmail.com</a></p>
     <p><strong>Phone:</strong> 9381518810</p>
     <p><strong>Location:</strong> Tadepalligudem, Andhra Pradesh</p>
   </section>
 
-</body>
+  <!-- Certificate Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close" id="modalCloseBtn">&times;</span>
+    <img class="modal-content" id="modalImage" alt="Certificate Preview" />
+  </div>
+
+  <!-- Scripts -->
   <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
 
-  menuToggle.onclick = () => {
-    navLinks.classList.toggle('active');
-  };
-</script>
+    menuToggle.onclick = () => {
+      navLinks.classList.toggle('active');
+    };
 
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Certificate Modal Logic
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.getElementById("modalCloseBtn");
+
+    document.querySelectorAll(".certificate-image").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+      });
+    });
+
+    closeBtn.onclick = () => {
+      modal.style.display = "none";
+    };
+
+    window.onclick = (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+
+</body>
 </html>
