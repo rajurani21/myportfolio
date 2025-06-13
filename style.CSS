@@ -326,35 +326,37 @@ html {
 }
 
 
-#contact {
+/* Contact Section */
+.contact-section {
   background-color: #0d0b1c;
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
+  color: #fff;
+  padding: 60px 20px 30px;
   font-family: 'Segoe UI', sans-serif;
+  text-align: center;
 }
 
 .contact-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
-  color: #ffffff;
   background: #0066ff;
   display: inline-block;
-  padding: 5px 15px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  padding: 8px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  color: #fff;
 }
 
 .contact-info p {
-  margin: 10px 0;
-  font-size: 1rem;
-  color: #00f0ff;
+  margin: 12px 0;
+  font-size: 1.1rem;
+  color: #00ffe7;
 }
 
 .contact-info i {
-  color: #00ffc8;
-  margin-right: 10px;
-  font-size: 1.2rem;
+  color: #00ffd5;
+  margin-right: 8px;
+  font-size: 1.3rem;
+  vertical-align: middle;
 }
 
 .contact-info a {
@@ -362,21 +364,26 @@ html {
   text-decoration: none;
 }
 
+.contact-info a:hover {
+  color: #ffffff;
+}
+
 .contact-form {
-  margin-top: 30px;
   max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
   padding: 12px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 5px;
   font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  width: 100%;
 }
 
 .contact-form textarea {
@@ -384,19 +391,29 @@ html {
 }
 
 .contact-form button {
-  width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
   background: linear-gradient(to right, #00ffd5, #00d2ff);
   color: #000;
+  font-size: 1rem;
+  font-weight: bold;
   border: none;
+  padding: 12px;
   border-radius: 25px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .contact-form button:hover {
   background: linear-gradient(to right, #00c3ff, #00ffe0);
   transform: scale(1.02);
 }
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+
+
