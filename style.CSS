@@ -326,102 +326,77 @@ html {
 }
 
 
-.contact-form {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.contact-form button {
-  padding: 10px;
-  font-size: 18px;
-  background-color: #007BFF;
+#contact {
+  background-color: #0d0b1c;
   color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #0056b3;
-}
-
-
-.footer {
   text-align: center;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #00ffe5;
-  font-size: 14px;
-  position: relative;
-  z-index: 1;
-  margin-top: 50px;
+  padding: 50px 20px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+.contact-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: #0066ff;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
 
-.contact-icons a {
-  display: block;
-  color: var(--accent-color);
-  margin: 0.5rem 0;
+.contact-info p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #00f0ff;
+}
+
+.contact-info i {
+  color: #00ffc8;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.contact-info a {
+  color: #3ca7ff;
   text-decoration: none;
 }
 
-.contact-icons i {
-  margin-right: 0.5rem;
-}
-
-form {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.contact-form {
+  margin-top: 30px;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-input,
-textarea {
-  padding: 0.75rem;
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
   border: none;
   border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
   resize: none;
 }
 
-button[type="submit"] {
-  background-color: var(--accent-color);
-  border: none;
-  padding: 0.75rem;
-  border-radius: 30px;
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
   font-weight: bold;
+  background: linear-gradient(to right, #00ffd5, #00d2ff);
+  color: #000;
+  border: none;
+  border-radius: 25px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
 }
 
-button[type="submit"]:hover {
-  background-color: #00ddbb;
+.contact-form button:hover {
+  background: linear-gradient(to right, #00c3ff, #00ffe0);
+  transform: scale(1.02);
 }
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #111;
-  color: #aaa;
-}
-
-
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
